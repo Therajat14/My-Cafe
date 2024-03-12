@@ -1,0 +1,314 @@
+@import url('https://fonts.googleapis.com/css2?family=Fugaz+One&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+
+/*   ||RESET */
+*, *::after, *::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 1.5rem;
+    
+}
+
+img{
+    display: block;
+    max-height: auto;
+    max-width: 100%;
+}
+
+input, button, textarea{
+    font: inherit;
+
+}
+
+/* || VARIABLE */
+
+:root{
+    /* Fonts */
+    --FF: "nunito", sans-serif;
+    --FF-HEADINGS:"Fugas one", cursive;
+    --FS: clamp(1rem, 2.2vh, 1.5rem);
+
+    /* COLORS */
+    --BGCOLOR: orange;
+    --BGCOLOR-FADE: rgb(252, 220, 160);
+    --BGIMAGE: linear-gradient(to bottom, var(--BGCOLOR), var(--BGCOLOR-FADE));
+    --BODY-BGCOLOR: #FFF;
+    --FONT-COLOR: black;
+
+    /* || BORDERS */
+    --BORDER-COLOR:#333;
+    --BORDERS : 1px solid var(--BORDER-COLOR);
+    --HIGHLIGHT-COLOR: rgb(51, 178, 51);
+    --LINK-COLOR: #000;
+    --LINK-HOVER: hsla(0, 0%, 0%, 0.6);
+    --LINK-ACTIVE: orange;
+    --HEADER-BGCOLOR: #000;
+    --HEADER-COLOR: #fff;
+    --NAV-BGCOLOR: #FFF;
+    --HERO-BGCOLOR:rgb(51, 178, 51, 0.75);
+    --HERO-COLOR: #FFF;
+
+    /* STANDARD PADDING */
+
+    --PADDING-TB: 0.25em;
+    --PADDING-SIDE: 2.5%;
+
+    /* STANDARD MARGIN */
+
+    --MARGIN: clamp(1em, 2.5em, 1.5em), 0;
+}
+
+/* || UTILITY CLASSES */
+.offscreen{
+    position: absolute;
+    left: -10000px;
+}
+
+.nowrap{
+    white-space: nowrap;
+}
+
+.center{
+    text-align: center;
+}
+
+/* Genral Styles */
+
+html{
+    scroll-behavior: smooth;
+    font-size: var(--FS);
+    font-family: var(--FF);
+    background-color: var(--BGCOLOR);
+    background-image: var(--BGIMAGE);
+
+}
+
+body{
+    background-color: var(--BODY-BGCOLOR);
+    color: var(--FONT-COLOR);
+    min-height: 100vh;
+    max-width: 800px;
+    margin:0 auto;
+   border-left: var(--BORDERS);
+   border-right: var(--BORDERS);
+   box-shadow: 0 0 10px var(--BORDER-COLOR);
+}
+h1, h2, h3{
+    font-family: var(--FF-HEADINGS);
+    font-weight: 900;
+    letter-spacing: 0.1em;
+}
+h2, h3{
+    margin-bottom: 1em;
+    color: var(--HIGHLIGHT-COLOR);
+}
+P{
+    line-height: 1.5;
+}
+a:any-link{
+    color: var(--LINK-COLOR);
+    text-decoration: none;
+
+}
+a:hover, a:focus-visible{
+    color: var(--LINK-HOVER);
+
+}
+a:active{
+    color: var(--LINK-ACTIVE);
+}
+
+/* header */
+
+.header{
+    position: sticky;
+    top: 0;
+    z-index: 1;
+
+}
+.header__h1{
+    text-align: center;
+    background-color: var(--HEADER-BGCOLOR);
+    color: var(--HEADER-COLOR);
+    padding: var(--PADDING-TB) var(--PADDING-SIDE);
+
+}
+.header__nav{
+    background-color:var(--NAV-BGCOLOR);
+    border-bottom: var(--BORDERS);
+    font-weight: bold;
+    box-shadow: 0px 2px 10px var(--BORDER-COLOR);
+}
+
+.header__ul{
+    padding:  var(--PADDING-TB) var(--PADDING-SIDE);
+    list-style-type: none;
+    display: flex;
+    justify-content: space-evenly;
+  gap: 0.8rem
+}
+
+.hero{
+    position: relative;
+
+}
+.hero__h2{
+    background-color: var(--HERO-BGCOLOR);
+    color: var(--HERO-COLOR) ;
+    padding: 0.25em 0.5em;
+    letter-spacing: 0.3rem;
+    text-shadow: 2px 2px 5px var(--BORDER-COLOR);
+    position: absolute;
+  
+    top: -100px;
+    left: 20px;
+    animation: showwelcome 0.5s ease-in-out 1s forwards;
+    
+
+}
+@keyframes showwelcome{
+    0%{
+        top: -20px;
+        transform: skew(0deg, -5deg) scaley(0);
+    }
+    80%{
+        top: 30px;
+        transform:skew(10deg, -5deg) scaley(1.2); 
+    }
+
+    100%{
+        top: 20px;
+        transform: skew(-10deg, -5deg) scaley(1);
+    }
+}
+   /* || FOOTER */
+
+   .footer
+   {
+    position: sticky;
+    bottom: 0;
+    background-color: var(--HEADER-BGCOLOR);
+    color: var(--HEADER-COLOR);
+    padding: var(--PADDING-TB) var(--PADDING-SIDE);
+    text-align: center;
+   }
+   
+   /* || MAIN */
+main{
+
+padding: var(--PADDING-TB) var(--PADDING-SIDE);
+}
+.main__article{
+    scroll-margin-top: 6.5;
+    margin:var(--MARGIN);
+    
+}
+.main__article:first-child{
+    margin-top: 1rem;
+   
+}
+.main__article:last-child{
+    margin-top: 1rem;
+    min-height:(100vh - 20rem);
+
+   
+}
+
+ /* || ABOUT */
+.mm{
+    display:inline;
+}
+.about__trivia{
+    margin:var(--MARGIN);
+
+}
+.about__trivia-answer{
+    margin-top: 1em;
+}
+
+.contact__h2{
+    margin: 0;
+}
+
+.contact__fieldset{
+    border: none;
+
+}
+.contact__p{
+    margin:1em 0;
+
+}
+.contact_label{
+    display: block;
+    font-weight: bold;
+}
+.contact__input, .contact__textarea{
+ padding: 0.5em;
+ border-radius: 15px;
+ border-width: 2px;
+ width: 100%;
+}
+
+.contact__button{
+    padding: 0.5em;
+    border-radius: 15px;
+    background-color: var(--HIGHLIGHT-COLOR);
+    color: var(--HEADER-COLOR);
+    border: 2px solid #000;
+ 
+}
+
+/* table{
+    border: var(--BORDERS);
+    width: 100%;
+
+}
+th{
+    border: var(--BORDERS);
+    color: var(--HIGHLIGHT-COLOR);
+    padding: 1rem;
+    
+}
+
+td{
+    border: var(--BORDERS);
+    padding: 1rem;
+}
+
+.menu__h2{
+    margin-top: 1rem;
+} */
+
+.menu__container {
+    width: 100%;
+    border-collapse: collapse;
+    padding:var(--PADDING-TB) var(--PADDING-SIDE);
+  }
+  
+  .menu__container caption {
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: var(--HIGHLIGHT-COLOR);
+    
+  }
+  
+  .menu__container th,
+  .menu__container td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+   
+   
+  }
+  
+  .menu__container th {
+    background-color: #f2f2f2;
+    color:var(--HIGHLIGHT-COLOR)
+  }
+  
+  .menu__container tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  

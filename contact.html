@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="discription" content="This page contains contact details" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Contact Us</title>
+  </head>
+  <body>
+    <header class="header">
+     <h1 class="header__h1">The Hevens Cafe</h1>
+
+      <nav class="header__nav">
+        <ul class="header__ul">
+          <li><a href="index.html">Home</a></li>
+
+          <li><a href="index.html#menu">Menu</a></li>
+          <li><a href="hours.html">Hours </a></li>
+          <li>
+            <a href="about.html">About</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <hr />
+    
+      <section class="hero">
+        <figure>
+          <img
+            src="img/cafe1.jpg"
+            alt="Interior of cafe"
+            width="1080"
+            height="360"
+          />
+          <figcaption class="offscreen">Interior of our cafe</figcaption>
+        </figure>
+      </section>
+      <hr />
+      <main class="main">
+      <article class="main__article">
+      <h2>Our Location</h2>
+      <b>Address : </b>
+      <address>
+        123 Main Street <br />
+        Springfield, IL 62701 <br />
+        United States
+        <br>
+        <b> Phone Number:</b> <a href="tel">&nbsp;+1 217-555-1234</a>
+      </address>
+      </article>
+      <article class="main__article contact" >
+      <h2 class="contact__h2">Our contact Form</h2>
+      <form action="https://httpbin.org/get" method="get" class="contact__form">
+        <fieldset class="contact__fieldset">
+          <legend class="offscreen">Send us a message</legend>
+
+          <p class="contact__p">
+         <label class="contact_label" for="FullName">Name:</label>
+          <input class="contact__input"
+            type="text"
+            id="FullName"
+            name="Full Name"
+            placeholder="Enter your full Name here"
+            autocomplete="on"
+            required
+            autofocus
+          />
+         </p>
+<p class="contact__p">
+         <label class="contact_label" for="Email">Email: </label>
+          <input class="contact__input"
+            type="email"
+            id="Email"
+            name="Email"
+            placeholder="example@email.com"
+            autocomplete="on"
+            required
+          />
+         </p>
+         <p class="contact__p">
+         <label class="contact_label" for="textbox"> Type your mesage here</label>
+         <br>
+          <textarea class="contact__textarea"
+            name="Message"
+            id="textbox"
+            cols="30"
+            rows="10"
+            placeholder="Enter some message here "
+          >
+        </textarea>
+         </p>
+        </fieldset>
+        <button class="contact__button" type="submit">Send</button>
+        <button class="contact__button" type="reset">Reset</button>
+      </form>
+      </article>
+      
+      <br />
+      
+      <br />
+      <a href="#">Back to Top</a>
+     
+    </main>
+  <footer class="footer">
+    <p><span class="nowrap">Copyright &copy;</span> <span class="nowrap">The Hevens Cafe</span></p>
+
+  </footer>
+  </body>
+</html>
